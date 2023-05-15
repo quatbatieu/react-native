@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Image } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
@@ -23,7 +23,7 @@ const SplasScreen = () => {
                 justifyContent: 'center',
             }}
         >
-            <Text>SplasScreen</Text>
+        <Image source={require("../../assets/iconHome.png")}></Image>
         </View>
     )
 }

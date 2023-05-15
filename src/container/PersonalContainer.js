@@ -1,22 +1,33 @@
 import { View, TextInput, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import BtnSection from '../components/BtnSection'
+import BtnRegister from '../components/BtnRegister'
 import InputNumber from '../components/InputNumber'
+import homes from "../../assets/home.png";
+import users from "../../assets/user.png";
+import { useNavigation } from '@react-navigation/native'
+const home = Image.resolveAssetSource(homes).uri;
+const user = Image.resolveAssetSource(users).uri;
+
 const PersonalContainer = () => {
+    const navigate = useNavigation()
+    const handleLogin = () =>{
+        navigate.navigate('LoginScreen')
+    }
     return (
         <View
             style={styles.container}
         >
             <Image
                 source={{
-                    uri: 'https://th.bing.com/th/id/R.edf018af5e9fa4dce24d38e24b9ec828?rik=1AI6o1Z0SVc6hQ&pid=ImgRaw&r=0',
+                    uri :  home
                 }}
                 style={styles.imageLogo}
                 resizeMode='contain'
             />
             <Image
                 source={{
-                    uri: "https://th.bing.com/th/id/OIP.643-DaTIL7rvnkBPbJoJogHaFH?pid=ImgDet&rs=1"
+                    uri: user
                 }}
                 style={styles.imageUser}
             />
@@ -24,12 +35,13 @@ const PersonalContainer = () => {
                 style={styles.MenuContainer}
             >
                 <BtnSection
-                    label='Login'
+                    label='Đăng nhập'
+                    onPress={handleLogin}
                 />
-                <BtnSection
-                    label='Register'
+                <BtnRegister
+                    label='Đăng ký'
                 />
-                <InputNumber/>
+                {/* <InputNumber/> */}
             </View>
         </View>
     )

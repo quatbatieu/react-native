@@ -2,15 +2,17 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     containetBtn: {
-        backgroundColor: '#2A7FF6',
+        backgroundColor: '#fff',
         marginVertical: 10,
         width: '100%',
         paddingVertical: 10,
         alignItems: 'center',
         borderRadius: 5,
+        borderColor : '#2A7FF6',
+        borderWidth : 1
     },
     labelBtn: {
-        color: '#fff',
+        color: '#2A7FF6',
         marginVertical: 2,
     },
     

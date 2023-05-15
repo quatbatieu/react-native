@@ -2,9 +2,8 @@ import { View, Text, TouchableOpacity, TextInput, TouchableHighlight } from 'rea
 import React from 'react'
 import styles from './style'
 
-const BtnSection = ({
-    label,
-    onPress
+const BtnRegister = ({
+    label,onPress
 }) => {
     return (
         <TouchableOpacity
@@ -18,4 +17,4 @@ const BtnSection = ({
     )
 }
 
-export default BtnSection
+export default BtnRegister

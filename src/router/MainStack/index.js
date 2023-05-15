@@ -1,11 +1,15 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../../screens/Home';
-import MyJob from '../../screens/MyJob';
 import Money from '../../screens/Money';
-import PersonnalScreen from '../../screens/Auth/Personnal';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import PersonalStack from '../PersonalStack';
+import MyJobStack from '../MyJobStack';
+import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Octicons } from '@expo/vector-icons';
+
 const Tab = createBottomTabNavigator();
 
 const BottomTab = () => {
@@ -14,37 +18,36 @@ const BottomTab = () => {
             initialRouteName='Home'
         >
             <Tab.Screen
-
-                name="Home" component={Home}
+                name="Trang chủ" component={Home}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="ios-home" color={color} size={size} />
+                        <AntDesign name="appstore-o" size={size} color={color} />
                     ),
                     headerShown: false
                 }}
             />
-            <Tab.Screen name="MyJob" component={MyJob}
+            <Tab.Screen name="Việc của tôi" component={MyJobStack}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="ios-home" color={color} size={size} />
+                        <FontAwesome name="pencil-square" size={size} color={color} />
                     ),
                     headerShown: false
                 }}
             />
-            <Tab.Screen name="Money" component={Money}
+            <Tab.Screen name="Ví tiền" component={Money}
 
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="ios-home" color={color} size={size} />
+                        <MaterialCommunityIcons name="wallet" size={size} color={color} />
                     ),
                     headerShown: false
                 }}
             />
-            <Tab.Screen name="PersonnalScreen" component={PersonnalScreen}
+            <Tab.Screen name="Cá nhân" component={PersonalStack}
 
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="person" color={color} size={size} />
+                        <Octicons name="feed-person"  size={size} color={color} />
                     ),
                     headerShown: false
                 }}
