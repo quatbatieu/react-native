@@ -4,7 +4,7 @@ import homes from "../../../assets/home.png";
 
 const home = Image.resolveAssetSource(homes).uri;
 
-const HeaderPersonal = ({label}) => {
+const HeaderPersonal = () => {
   return (
     <View style={styles.container}>
       <Image
@@ -14,9 +14,6 @@ const HeaderPersonal = ({label}) => {
                 style={styles.imageLogo}
                 resizeMode='contain'
             />
-        <Text
-                style={styles.labelBtn}
-            >{label}</Text>
     </View>
   )
 }
@@ -30,12 +27,6 @@ const styles = StyleSheet.create({
     },
     imageLogo: {
         width: 100,
-        height: 100,
-        marginBottom: 20
-    },
-    labelBtn: {
-        color: '#0054D9',
-        marginVertical: 2,
-        fontSize : 24
+        height: 40,
     },
 })

@@ -1,40 +1,38 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import PersonnalScreen from '../screens/Auth/Personnal';
+import Job from '../screens/MyJob/job';
+import Detail from '../screens/MyJob/Detail';
+import Time from '../screens/MyJob/Time';
+import Succes from '../screens/MyJob/Succes';
 
 const Stack = createStackNavigator();
 
 export default function MyJobStack() {
     return (
         <Stack.Navigator
-            initialRouteName='PersonnalScreen'
+            initialRouteName='Job'
         >
             <Stack.Screen
                 options={{
                     headerShown: false
                 }}
-                name="PersonnalScreen" component={PersonnalScreen} />
-            {/* <Stack.Screen
+                name="Job" component={Job} />
+            <Stack.Screen
                 options={{
                     headerShown: false,
                 }}
-                name="LoginScreen" component={LoginScreen} /> */}
-            {/* <Stack.Screen
+                name="Detail" component={Detail} />
+            <Stack.Screen
                 options={{
                     headerShown: false,
                 }}
-            name="RegisterScreen" component={RegisterScreen} /> */}
-            {/* <Stack.Screen
+            name="Time" component={Time} />
+            <Stack.Screen
                 options={{
                     headerShown: false,
                 }}
-            name="OtpScreen" component={OtpScreen} /> */}
-            {/* <Stack.Screen
-                options={{
-                    headerShown: false,
-                }}
-            name="SuccessScreen" component={SuccessScreen} /> */}
+            name="Succes" component={Succes} />
         </Stack.Navigator>
     )
 }
